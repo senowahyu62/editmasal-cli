@@ -1,0 +1,11 @@
+#!/bin/bash
+ohgini=$(ls -1)
+read -p "Masukkan Kata Yang Mau Diganti : " -e ganti
+read -p "Masukkan Kata Pengganti : " -e gantine
+editcok (){
+sed -i "s|$ganti|$gantine|g" $sayang
+}
+for sayang in $ohgini 
+do
+        editcok;
+done
